@@ -1,7 +1,9 @@
 * {
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
 }
 header {
     padding: 5px;
@@ -19,9 +21,9 @@ header {
 }
 header .home {
     position: relative;
-    color: black;
+    color: white;
     text-decoration: none;
-    font-size: 2em;
+    font-size: 1.5em;
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: 0.6s;
@@ -29,7 +31,7 @@ header .home {
 header.sticky a {
     margin: 0 15px;
     font-weight: 2em;
-    color: rgb(46, 4, 85);
+    color: white;
 }
 header ul {
     display: flex;
@@ -45,7 +47,7 @@ header ul li {
 header ul li a {
     position: relative;
     margin: 0 15px;
-    color: black;
+    color: white;
     text-decoration: none;
     letter-spacing: 2px;
     font-weight: bold;
@@ -64,18 +66,16 @@ header.sticky ul li a {
     color: #fff;
     transition: 0.6s;
 }
-h1 {
-    text-align: center;
-    font-size: 500%;
-    color: black;
-    letter-spacing: 3px;
-    padding-top: 25px;
-}
 body {
     color: black;
     background-color: #fff;
     margin: 0;
     padding: 0;
+    height: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8em;
+    image-rendering: -webkit-optimize-contrast;
 }
 body::-webkit-scrollbar {
     width: .8rem;
@@ -87,21 +87,61 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
     background: rgb(15, 15, 15);
 }
-.margin {
-    margin: 75% 0;
+.img1, .img2, .img3, .img4 {
+    position: relative;
+    opacity: 1;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    /*
+        fixed = parallax
+        scroll = normal
+    */
+    background-attachment: fixed;
 }
-.parallax {
-    background: url(abstract.webp)
-    repeat fixed 100%;
+.img1 {
+    background-image: url('city.jpg');
+    min-height: 775px;
 }
-.parallax-inner {
-    padding-top: 30%;
-    padding-bottom: 30%;
+.img2 {
+    background-image: url('2.jpg');
+    min-height: 400px;
 }
-.logo {
-    /*color: rgb(235, 227, 227);*/
-    letter-spacing: 5px;
-    font-size: 23px;
+.img3 {
+    background-image: url('2.jpg');
+    min-height: 400px;
+}
+.img4 {
+    background-image: url('city.jpg');
+    min-height: 400px;
+}
+.section {
+    text-align: center;
+    padding: 50px 80px;
+}
+.section-light {
+    background-color:#f4f4f4;
+    color: #666;
+}
+.section-dark {
+    background-color: #282e34;
+    color: #ddd;
+}
+.text {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+.text .border {
+    background-color: #111;
+    color: white;
+    padding: 20px;
 }
 .sticky {
     position: fixed;
