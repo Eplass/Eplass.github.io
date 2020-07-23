@@ -21,17 +21,18 @@ header {
 }
 header .home {
     position: relative;
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: 1.5em;
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: 0.6s;
+    padding: 5px;
 }
 header.sticky a {
     margin: 0 15px;
     font-weight: 2em;
-    color: white;
+    color: black;
 }
 header ul {
     display: flex;
@@ -43,11 +44,12 @@ header ul {
 header ul li {
     position: relative;
     list-style: none;
+    padding: 5px 30px;
 }
 header ul li a {
     position: relative;
     margin: 0 15px;
-    color: white;
+    color: black;
     text-decoration: none;
     letter-spacing: 2px;
     font-weight: bold;
@@ -55,7 +57,7 @@ header ul li a {
 }
 header.sticky {
     padding: 10px 10px;
-    background: black;
+    background: white;
 }
 header.sticky ul li a {
     position: relative;
@@ -63,8 +65,12 @@ header.sticky ul li a {
     text-decoration: none;
     letter-spacing: 2px;
     font-weight: 500;
-    color: #fff;
+    color: black;
     transition: 0.6s;
+}
+/* to be implemented*/
+a:hover {
+    
 }
 body {
     color: black;
@@ -87,7 +93,7 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
     background: rgb(15, 15, 15);
 }
-.img1, .img2, .img3, .img4 {
+.img1, .img2, .img3, .img4, .img5 {
     position: relative;
     opacity: 1;
     background-position: center;
@@ -101,28 +107,38 @@ body::-webkit-scrollbar-thumb {
     background-attachment: fixed;
 }
 .img1 {
-    background-image: url('city.jpg');
+    /* background-image: url('backgrounds/city.jpg'); */
+    background-color: rgb(112, 112, 112);
     min-height: 775px;
+    opacity: 1;
 }
-.img2 {
-    background-image: url('2.jpg');
+.img2, .img3, .img4 {
+    background-image: url('backgrounds/2.jpg');
+    min-height: 300px;
+}
+.img5 {
+    /* background-image: url('backgrounds/city.jpg'); */
     min-height: 400px;
 }
-.img3 {
-    background-image: url('2.jpg');
-    min-height: 400px;
-}
-.img4 {
-    background-image: url('city.jpg');
-    min-height: 400px;
-}
-.section {
+.section h2 {
     text-align: center;
     padding: 50px 80px;
+}
+.left {
+    float: left;
+    padding: 0px 50px 50px 50px;
+    object-fit: cover;
+}
+.section p {
+    text-align: left;
+    padding: 0px 80px 50px;
+    align-items: center;
+    justify-content: center;
 }
 .section-light {
     background-color:#f4f4f4;
     color: #666;
+    overflow: auto;
 }
 .section-dark {
     background-color: #282e34;
