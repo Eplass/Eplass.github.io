@@ -72,6 +72,16 @@ header.sticky ul li a {
 a:hover {
     
 }
+canvas {
+    position: fixed;
+    display: block;
+    z-index: -10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(rgb(94, 94, 94), rgb(34, 34, 34));
+}
 body {
     color: black;
     background-color: #fff;
@@ -99,7 +109,6 @@ body::-webkit-scrollbar-thumb {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-
     /*
         fixed = parallax
         scroll = normal
@@ -108,12 +117,12 @@ body::-webkit-scrollbar-thumb {
 }
 .img1 {
     /* background-image: url('backgrounds/city.jpg'); */
-    background-color: rgb(112, 112, 112);
+    /* background-color: rgb(112, 112, 112); */
     min-height: 775px;
     opacity: 1;
 }
 .img2, .img3, .img4 {
-    background-image: url('backgrounds/2.jpg');
+    /* background-image: url('backgrounds/2.jpg');*/
     min-height: 300px;
 }
 .img5 {
